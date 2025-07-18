@@ -2,17 +2,15 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hubungi kami</title>
+	<?php $this->load->view('_partials/head.php'); ?>
 </head>
 
 <body>
+	<?php $this->load->view('_partials/navbar.php'); ?>
 
 	<h1>Contact Us</h1>
 	<p>Hubungi kami melalui form berikut</p>
-	<form action="###" method="get">
+	<form action="" method="get">
 		<div>
 			<label for="name">Name</label>
 			<input type="text" name="name" placeholder="your name" required/>
@@ -32,6 +30,7 @@
 		</div>
 	</form>
 
+	<?php $this->load->view('_partials/footer.php'); ?>
 </body>
 
 </html>

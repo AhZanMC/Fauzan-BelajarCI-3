@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About Page</title>
+    <?php $this->load->view('partials/head'); ?>
 </head>
 <body>
-    <h1>Ini halaman About</h1>
-    <p>Selamat datang di halaman about!</p>
+    <?php $this->load->view('partials/navbar'); ?>
+
+    <h1>About Page</h1>
+
+    <?php $this->load->view('partials/footer'); ?>
 </body>
 </html>

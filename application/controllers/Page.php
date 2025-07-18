@@ -6,23 +6,31 @@ class Page extends CI_Controller
 {
 	public function index()
 	{
-		$this->load->view('home');
+		$data['meta'] = [
+			'title' => 'Ingfo Menkrep',
+		];
+
+		$this->load->view('home', $data);
 	}
 
 	public function about()
 	{
+		$data['meta'] = [
+			'title' => 'Tentang Kami Ingfo Menkrep',
+		];
 		$this->load->view('about');
 	}
 
 	public function contact()
 	{
-		// Ini untuk menangani form submit jika ada
-		// kalo gak ada form submit, maka akan menampilkan halaman contact :v
-		if ($this->input->method() === 'post') {
-			print_r($this->input->post()); // print_r() buat debugging, untuk melihat data yang dikirim
+		$data['meta'] = [
+			'title' => 'Contact Us',
+		];
+		
+		if($this->input->method() === 'post'){
+			print_r($this->input->post());
 		}
 
-		// untuk menampilkan halaman contact
-		$this->load->view('contact');
+		$this->load->view('contact', $data);
 	}
 }
